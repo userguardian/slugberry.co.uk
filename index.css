@@ -1,20 +1,41 @@
-
 body {
-    background-color: black;
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: gainsboro;
+    background-color: #111;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+    position: relative;
 }
 
-.center {
-    text-align: center;
+/* Grain effect overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* ensures clicks go through */
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABM0lEQVQ4T6XTv0sDQRgH8N8IAoJjgoSQkFj4BxBAIEgqCip7Bc8gktBBKf6CwYLCw8TCpSoWClcvHsPJZh5pYV2y8M3O8O2fYpS95s0ylP7nU8LssRGoG7HG2Rno2oZj0A9RYMPn+BkaIGq3wHVXqN8FZzzKMg1xkMcWB8gA0nMS8p3pCc0ROUFZ+IdLYwh+wyV2cRkPcD6RckygVYlmlUKh1d8xV3VwD4RHgQfT/nh9+AFc01i8Ph8fnTt4myKYeRS8J1CJmLO5Ods2Kx9wLQqtVqvb6bSZCJmle0Oq1+sm49mYJ8xXPG07H8+KP9Bb6ClXzIt8lV2QAAAABJRU5ErkJggg==");
+    opacity: 0.08; /* adjust how visible the grain is */
+    animation: grainMove 1s steps(10) infinite;
 }
 
-.small-image {
-    width: 150px; 
-    height: auto;
-    border-radius: 8px;
+/* Slight random movement for dynamic noise */
+@keyframes grainMove {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -5%); }
+    20% { transform: translate(-10%, 5%); }
+    30% { transform: translate(5%, -10%); }
+    40% { transform: translate(-5%, 10%); }
+    50% { transform: translate(10%, 5%); }
+    60% { transform: translate(5%, 10%); }
+    70% { transform: translate(-10%, -5%); }
+    80% { transform: translate(10%, -10%); }
+    90% { transform: translate(-5%, 5%); }
+    100% { transform: translate(0, 0); }
 }
