@@ -1,0 +1,20 @@
+
+body {
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gainsboro;
+}
+
+.center {
+    text-align: center;
+}
+
+.small-image {
+    width: 150px; 
+    height: auto;
+    border-radius: 8px;
+}
