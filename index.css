@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+    background-color: gray;
     color: white;
     font-family: sans-serif;
     overflow: hidden;
@@ -39,3 +39,4 @@ body::before {
     90% { transform: translate(-5%, 5%); }
     100% { transform: translate(0, 0); }
 }
+
