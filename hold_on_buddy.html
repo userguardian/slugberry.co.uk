@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h.o.b</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* General 2004 Vibe */
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4px;
+        }
+        
+        /* Sky Gradient Background */
+        body {
+            background: linear-gradient(to bottom, #87CEEB 0%, #B0E0E6 50%, #E0FFFF 100%);
+        }
+
+        .banner-header {
+            border: 4px ridge #4CAF50; /* Green Ridge for Mountain Theme */
+            background-color: #8BC34A; /* Light Green */
+            text-shadow: 2px 2px #fff;
+            color: #333;
+            position: relative; /* Needed for absolute positioning of the detail */
+        }
+        
+        .window-container {
+            border: 6px outset #A9A9A9; /* Darker Grey Frame */
+            box-shadow: 8px 8px 0px 0px #696969;
+            background-color: #FAFAFA; /* Light Interior */
+            color: #333;
+        }
+
+        .back-link {
+            text-decoration: underline;
+            color: #0000FF;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: #FF00FF;
+            text-decoration: none;
+        }
+
+        /* Bird Animation Styling */
+        @keyframes fly {
+            0% { transform: translateX(100vw); opacity: 0; }
+            5% { opacity: 1; }
+            95% { opacity: 1; }
+            100% { transform: translateX(-100vw); opacity: 0; }
+        }
+
+        .bird {
+            position: absolute;
+            animation: fly linear infinite;
+            pointer-events: none; /* Allows clicks to pass through */
+            z-index: 0; /* Keep behind content */
+        }
+        
+        /* Ensures the bird images are scaled appropriately */
+        .bird img {
+            width: 40px; 
+            height: 40px;
+        }
+
+
+        /* Individual Bird Speeds and Start Positions */
+        .bird:nth-child(1) { top: 5%; left: 0%; animation-duration: 25s; animation-delay: 0s; }
+        .bird:nth-child(2) { top: 15%; left: 30%; animation-duration: 18s; animation-delay: 6s; }
+        .bird:nth-child(3) { top: 25%; left: 60%; animation-duration: 30s; animation-delay: 12s; }
+        .bird:nth-child(4) { top: 50%; left: 90%; animation-duration: 22s; animation-delay: 4s; }
+
+        /* Detail in title's frame */
+        .banner-detail {
+            position: absolute;
+            bottom: -50px; /* Adjust as needed */
+            right: -50px; /* Adjust as needed */
+            transform: rotate(0deg); /* Rotate 45 degrees right */
+            z-index: 1; /* Ensure it's above banner background */
+            line-height: 1; /* Prevent extra spacing */
+        }
+        
+        /* Ensures the detail image is scaled appropriately */
+        .banner-detail img {
+            width: 150px; 
+            height: 150px;
+        }
+
+        .littlelook {
+            width: 100px;
+            height: 70px;
+            position: absolute;
+            right: 800px;
+            top: 575px;
+        }
+    </style>
+</head>
+<body class="relative">
+    
+    <!-- Animated Birds (Moving Pictures) - Now using image placeholders -->
+    <div class="bird">
+        <img src="./pigeon.gif" alt="Flying Bird Placeholder" onerror="this.style.backgroundColor='#555555'; this.style.color='#FFFFFF'; this.innerText='B'">
+    </div>
+    <div class="bird">
+        <img src="./pigeon.gif" alt="Flying Bird Placeholder" onerror="this.style.backgroundColor='#555555'; this.style.color='#FFFFFF'; this.innerText='B'">
+    </div>
+    <div class="bird">
+        <img src="./pigeon.gif" alt="Flying Bird Placeholder" onerror="this.style.backgroundColor='#555555'; this.style.color='#FFFFFF'; this.innerText='B'">
+    </div>
+    <div class="bird">
+        <img src="./pigeon.gif" alt="Flying Bird Placeholder" onerror="this.style.backgroundColor='#555555'; this.style.color='#FFFFFF'; this.innerText='B'">
+    </div>
+
+    <div class="w-full max-w-4xl lg:w-[800px] p-0 z-10 mt-4 mb-4">
+
+        <header class="banner-header w-full text-center p-4 mb-6 rounded-t-lg">
+            <h1 class="text-4xl font-bold mb-1">
+                <span class="inline-block"></span> hold on, buddy <span class="inline-block"></span>
+            </h1>
+            <p class="text-lg">
+                don't fall twin 💯
+            </p>
+            
+            <!-- Tiny detail in bottom right corner of the banner - Now using image placeholder -->
+            <div class="banner-detail">
+                <img src="./handhold.png" alt="Pickaxe Detail Placeholder" onerror="this.style.backgroundColor='#222222'; this.style.color='#FFFFFF'; this.innerText='P'">
+            </div>
+        </header>
+
+        <main class="window-container w-full p-8 rounded-b-lg text-center">
+            
+            <div class="mb-8 p-4 border-2 border-dashed border-green-700 bg-yellow-100/70">
+                <span class="text-2xl text-green-700 font-bold">oops! not ready!</span>
+                <div class="littlelook">
+                    <img src="./look.jpg" alt="">
+                </div>
+            </div>
+
+            <p class="text-xl mb-8">
+                ok so basically you're climbing a huge ass mountain and its very hard to control i hate this game
+            </p>
+
+            <div class="my-6">
+                <!-- Placeholder for high altitude vista -->
+                <div class="w-full h-48 bg-gray-300 border-4 border-double border-green-500 flex justify-center items-center text-gray-700 font-bold">
+                    IF THERES NO IMAGE HERE THAT MEANS I SUCK AT CODING
+                </div>
+            </div>
+
+            <p class="text-sm mb-4 italic">
+                the suckler
+            </p>
+            
+            <a href="index.html" class="back-link">
+                &lt;&lt; return?
+            </a>
+        </main>
+        
+    </div>
+</body>
+</html>

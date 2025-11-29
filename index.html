@@ -1,31 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Site Closed</title>
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: "Times New Roman", serif;
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-size: 2rem;
-      text-align: center;
-    }
-    .crossed {
-      text-decoration: line-through;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home of the slug</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Verdana, Arial, sans-serif;
+            background-color: #E8F8FF;
+            min-height: 100vh;
+            background-image: repeating-linear-gradient(45deg, #f0f8ff 0, #f0f8ff 2px, #E8F8FF 2px, #E8F8FF 4px);
+        }
+
+        .banner-header {
+            border: 4px ridge #ff69b4;
+            background-color: #ffb6c1;
+            text-shadow: 2px 2px #fff;
+        }
+        
+        .window-container {
+            border: 6px outset #D1D5DB;
+            box-shadow: 8px 8px 0px 0px #A0AEC0;
+        }
+
+        .item-card {
+            border: 2px solid;
+            background-color: #fff;
+            box-shadow: 3px 3px 0px 0px rgba(0,0,0,0.2);
+            transition: all 0.1s linear;
+        }
+
+        .item-card:hover {
+            border-color: #FF00FF;
+            transform: none;
+            background-color: #FFFFAA;
+        }
+
+        .back-link {
+            text-decoration: underline;
+            color: #0000FF;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            color: #FF00FF;
+            text-decoration: none;
+        }
+        
+        .project-section {
+            border: 3px dashed #ffc0cb;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .project-title {
+            color: #ff69b4;
+            font-size: 1.5rem;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 3px 8px;
+            border: 2px outset #5cb85c;
+            background-color: #7aff7a;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .project-link:active {
+            border: 2px inset #5cb85c;
+        }
+    </style>
 </head>
-<body>
-  THIS SITE IS CLOSED, <span class="crossed">FUCK OFF.</span>
-  <div style="margin-top: 10px; font-size: 1.5rem;">
-    have a good day!
-  </div>
+<body class="flex flex-col items-center p-4">
+
+    <div class="w-full max-w-4xl lg:w-[800px] p-0">
+
+        <header class="banner-header w-full text-center p-4 mb-6 rounded-t-lg">
+            <h1 class="text-4xl font-bold text-pink-700 mb-1">
+                <span class="animate-pulse inline-block">☆ﾟ.*･｡ﾟ</span> collection! <span class="animate-pulse inline-block">☆ﾟ.*･｡ﾟ</span>
+            </h1>
+            <p class="text-lg text-gray-800">
+                made by slug. new and improved. you are now welcome.
+            </p>
+        </header>
+
+        <main class="window-container w-full p-4 bg-white rounded-b-lg">
+            
+            <div class="text-center mb-6 border-b border-gray-400 pb-4">
+                <span class="text-xl text-red-500 font-bold">collection of slugberry's games</span>
+            </div>
+
+
+
+            <div class="space-y-6">
+                
+                <div class="project-section">
+                    <div class="project-title">
+                        Threat     <!--<span style="color: #6495ED; font-size: 0.9em; font-weight: bold; text-decoration: none;">(Completed!)</span> -->
+                    </div>
+                    <p class="text-sm text-gray-700 mb-2">
+                        VIEW GAME: "Threat"
+                    </p>
+                    <p>
+                        💣
+                    </p>
+                    <a href="threat_unshowcase.html" class="project-link">
+                        ? :o &gt;&gt;
+                    </a>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-title">
+                        Western Frontiers
+                    </div>
+                    <p class="text-sm text-gray-700 mb-2">
+                        VIEW GAME: "Western Frontiers"
+                    </p>
+                    <p>
+                        🤠
+                    </p>
+                    <a href="western_frontiers.html" class="project-link">
+                        ? :o &gt;&gt;
+                    </a>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-title">
+                        hold on, buddy
+                    </div>
+                    <p class="text-sm text-gray-700 mb-2">
+                        VIEW GAME: "hold on, buddy"
+                    </p>
+                    <p>
+                        ⛰️
+                    </p>
+                    <a href="hold_on_buddy.html" class="project-link">
+                        ? :o &gt;&gt;
+                    </a>
+                </div>
+
+                <div class="project-section">
+                    <div class="project-title">
+                        Looming
+                    </div>
+                    <p class="text-sm text-gray-700 mb-2">
+                        VIEW GAME: "Looming"
+                    </p>
+                    <p>
+                        📃
+                    </p>
+                    <a href="looming.html" class="project-link">
+                        ? :o &gt;&gt;
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-gray-400 text-center">
+                <p class="text-sm text-gray-700 mb-2">
+                    more are bound to come.
+                </p>
+                <p class="mb-2">
+                    i hate you all.
+                </p>
+                <p class="text-sm text-gray-700 mb-2">
+                    this site was made with 4 months worth of education.
+                </p>
+            </div>
+        </main>
+        
+    </div>
+    
+    <script>
+        const stars = document.querySelectorAll('.animate-pulse');
+        setInterval(() => {
+            stars.forEach(star => {
+                star.style.opacity = (star.style.opacity == 1 || star.style.opacity == '') ? 0.4 : 1;
+            });
+        }, 300);
+    </script>
 </body>
 </html>
-
